@@ -51,7 +51,7 @@ def main():
     with (open(options.output, 'wt') if options.output else sys.stdout) as out:
         out.write('{pkgs, '
                   'fetchurl ? pkgs.fetchurl, '
-                  'python ? pkgs.python, pythonPackages ? pythonPackages, '
+                  'python ? pkgs.python, pythonPackages ? pkgs.pythonPackages, '
                   'myEnvFun ? pkgs.myEnvFun}:\n')
         out.write('let\n')
         all_names = []
