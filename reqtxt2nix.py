@@ -30,7 +30,7 @@ def main():
     options = ap.parse_args()
 
     if not options.requirements and not options.files:
-        options.requirements = ['requirements.txt']
+        options.files = ['requirements.txt']
 
     all_req = []
     finder = PackageFinder(
@@ -41,6 +41,7 @@ def main():
     for r in options.requirements:
         all_req.append(InstallRequirement.from_line(r))
     for f in options.files:
+        print("F", f)
         all_req.extend(parse_requirements(f, finder=finder))
 
     if options.output:
