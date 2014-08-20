@@ -21,7 +21,7 @@ Running::
 This generates the ``~/.nixpkgs/myproject.nix`` and prints instructions on
 how to activate it. Which boils down to::
 
-Add the following to the ~/.nixpkgs/config.nix:
+Add the following to the ``~/.nixpkgs/config.nix``::
 
     packageOverrides = pkgs: rec {
         myproject = import ./myproject.nix {
