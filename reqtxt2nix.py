@@ -2,7 +2,6 @@
 
 import sys
 import os.path
-import urllib.request
 import json
 import argparse
 import subprocess
